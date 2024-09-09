@@ -1,6 +1,6 @@
 ---
-title: "Demonstration video: The `{here}` package and the `here()` function"
-subtitle: "File paths and specifying file locations within an Rproject"
+title: "Demonstration video: How to use the `here()` function"
+subtitle: "*Specifying file paths & targeting file locations within an Rproject*"
 author: "MM4DBER Training Team"
 date: "Updated: `r format(Sys.time(), '%B %d, %Y')`"
 output:
@@ -26,15 +26,17 @@ knitr::opts_chunk$set(echo = TRUE, warning = FALSE, message = FALSE)
 
 > Mixture Modeling for Discipline Based Education Researchers (MM4DBER) is an NSF funded training grant to support STEM Education scholars in integrating mixture modeling into their research.
 
+#### Follow allong here: [Video Handout](https://mm4dber24.github.io/here_demo.html)
+
 #### Download project materials here: [GitHub Repository](https://github.com/garberadamc/here_demo)
 
 # --------------------------------------------------------------------------------------
 
 ### What does the `here()` function do and why is it useful?
 
-The `here()` function in R is part of the `here` package, which helps manage file paths in a more organized and reproducible way when working with projects.
+> The `here()` function in R is part of the `here` package, which helps manage file paths in a more organized and reproducible way when working with projects.
 
-**NOTE:** The `here()` function is designed to be used within an R project workflow, where all files are organized inside the project's main directory. It is good practice to check that you are working within an R project at the beginning of your session. Look at the top right corner of RStudio; it should display the name of your project (e.g., `here_demo-main`).
+> **NOTE:** The `here()` function is designed to be used within an R project workflow, where all files are organized inside the project's main directory. It is good practice to check that you are working within an R project at the beginning of your session. Look at the top right corner of RStudio; it should display the name of your project (e.g., `here_demo-main`).
 
 #### Purpose of `here()`
 
