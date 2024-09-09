@@ -1,0 +1,111 @@
+---
+title: "Demonstration video: The `{here}` package and the `here()` function"
+subtitle: "File paths and specifying file locations within an Rproject"
+author: "MM4DBER Training Team"
+date: "Updated: `r format(Sys.time(), '%B %d, %Y')`"
+output:
+  html_document:
+    toc: no
+    toc_float: no
+    theme: flatly
+  pdf_document:
+    toc: no
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE, warning = FALSE, message = FALSE) 
+```
+
+# --------------------------------------------------------------------------------------
+
+![](figures/mm4dber_white.jpg){style="float: left;" width="300"}
+
+![](figures/NSF-Logo.png){style="float: left;" width="300"}
+
+# --------------------------------------------------------------------------------------
+
+> Mixture Modeling for Discipline Based Education Researchers (MM4DBER) is an NSF funded training grant to support STEM Education scholars in integrating mixture modeling into their research.
+
+#### Download project materials here: [GitHub Repository](https://github.com/garberadamc/here_demo)
+
+# --------------------------------------------------------------------------------------
+
+### What does the `here()` function do and why is it useful?
+
+The `here()` function in R is part of the `here` package, which helps manage file paths in a more organized and reproducible way when working with projects.
+
+**NOTE:** The `here()` function is designed to be used within an R project workflow, where all files are organized inside the project's main directory. It is good practice to check that you are working within an R project at the beginning of your session. Look at the top right corner of RStudio; it should display the name of your project (e.g., `here_demo-main`).
+
+#### Purpose of `here()`
+
+> When you're working on a data science project, you often have multiple files— datasets, scripts, and outputs—that are organized in different folders. Managing these files and writing code that points to them can get tricky, especially if the project is moved to another computer or shared with collaborators. The here() function makes it easier to handle these file paths by providing a consistent, relative path to files within your project.
+
+#### Why is `here()` Useful?
+
+- **Simplicity:** Instead of writing long, complex paths that depend on your computer's directory structure such as `C:/Users/YourName/Documents/Project/data/file.csv`, you use `here("data", "file.csv")` to refer to a file. This makes your code cleaner and easier to understand.
+- **Reproducibility:** Using `here()` ensures that your code works correctly, regardless of who runs it or where the project folder is located. This is important in academic research where sharing and collaboration are common.
+
+#### How does `here()` work?
+
+- **Set the Project Root:** The here package identifies the top-level directory (the "root") of your project. This is typically where your main script or RStudio project file (`.Rproj`) is located.
+
+- **Create Relative Paths:** When you use `here()`, you specify the path relative to the root directory. For example, `here("data", "file.csv")` refers to the file `file.csv` in a folder named `data` within your project directory.
+
+# --------------------------------------------------------------------------------------
+
+### Let's get started!
+
+# --------------------------------------------------------------------------------------
+
+#### Load packages
+
+```{r}
+library(here)      
+library(tidyverse) 
+```
+
+# --------------------------------------------------------------------------------------
+
+#### Locate your projects working directory or the file path for your top-level directory:
+
+```{r}
+here()
+```
+
+
+
+# --------------------------------------------------------------------------------------
+
+#### Read a CSV file from the sub-folder named "data" using the `here() function:
+
+```{r}
+lsay_data <- read_csv(here("data", "lsay_sci_data.csv")) 
+```
+
+# --------------------------------------------------------------------------------------
+
+#### An example with multiple nested folders:
+
+```{r, eval=FALSE}
+
+add_name_here <- read_csv(
+  here(
+    
+  )) 
+
+```
+
+
+# --------------------------------------------------------------------------------------
+
+## References
+
+Hester, Jim, and Kirill Müller (2020). here: A Simpler Way to Find Your Files. R package version 1.0.1. URL: https://CRAN.R-project.org/package=here.
+
+R Core Team (2017). R: A language and environment for statistical computing. R Foundation for Statistical Computing, Vienna, Austria. URL http://www.R-project.org/
+
+Wickham et al., (2019). Welcome to the tidyverse. Journal of Open Source Software, 4(43), 1686, https://doi.org/10.21105/joss.01686
+
+# --------------------------------------------------------------------------------------
+
+![](figures/UCSB_Navy_mark.png){width="75%"}
