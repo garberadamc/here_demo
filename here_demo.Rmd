@@ -90,9 +90,8 @@ lsay_data <- read_csv(here("data", "lsay_sci_data.csv"))
 
 ```{r, eval=FALSE}
 
-add_name_here <- read_csv(
-  here(
-    
+v2_lsay_data <- read_csv(
+  here("data", "data_versions", "version2_lsay_sci.csv"
   )) 
 
 ```
