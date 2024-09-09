@@ -26,7 +26,7 @@ knitr::opts_chunk$set(echo = TRUE, warning = FALSE, message = FALSE)
 
 > Mixture Modeling for Discipline Based Education Researchers (MM4DBER) is an NSF funded training grant to support STEM Education scholars in integrating mixture modeling into their research.
 
-#### Follow allong here: [Video Handout](https://mm4dber24.github.io/here_demo.html)
+#### Follow allong here: [Video](https://drive.google.com/file/d/1cmxZk1Oo52rtzZtZjCCPfD-nPqWJ_qwe/view?usp=sharing)
 
 #### Download project materials here: [GitHub Repository](https://github.com/garberadamc/here_demo)
 
